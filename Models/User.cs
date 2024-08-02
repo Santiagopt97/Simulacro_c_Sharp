@@ -39,7 +39,10 @@ namespace Simulacro_c_Sharp.Models
             Email: {Email}
             Phone: {Phone}
             Address: {Address}");
-            Console.WriteLine("---------------End Details---------------");
+        }
+
+        public virtual void ShowDetailsPublic(){
+            ShowDetails();
         }
 
         protected int CalculateAge(){

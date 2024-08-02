@@ -18,6 +18,16 @@ namespace Simulacro_c_Sharp.Models
             DrivingExperience = drivingExperience;
         }
 
+        public override void ShowDetailsPublic()
+        {
+            base.ShowDetailsPublic();
+            Console.WriteLine($@"
+            LicenseNumber: {LicenseNumber}
+            LicenseCategory: {LicenseCategory}
+            DrivingExperience: {DrivingExperience}");
+            Console.WriteLine("---------------End Details---------------");
+        }
+
         public void UpdateLicenseCategory(string newLicenseCategory){
             LicenseCategory = newLicenseCategory;
             Console.WriteLine($"Your new license category is: {LicenseCategory}");

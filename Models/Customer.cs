@@ -16,6 +16,15 @@ namespace Simulacro_c_Sharp.Models
             PreferredPaymentMethod = preferredPaymentMethod.ToLower();
         }
 
+        public override void ShowDetailsPublic()
+        {
+            base.ShowDetailsPublic();
+            Console.WriteLine($@"
+            MembershipLevel: {MembershipLevel}
+            PreferredPaymentMethod: {PreferredPaymentMethod}");
+            Console.WriteLine("---------------End Details---------------");
+        }
+
         public void UpdateMembershipLevel(){
             Console.WriteLine("Please write your new membership level");
             var newMembershipLevel = Console.ReadLine().ToLower();
