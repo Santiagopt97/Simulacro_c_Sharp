@@ -29,7 +29,10 @@ namespace Simulacro_c_Sharp.Models
         public void DeleteVehiculo(int id, List<Vehicle> vehiclesList){
             var vehicleToDelete = vehiclesList.Find(vehicle => vehicle.Id == id);
             if(vehicleToDelete != null){
-                vehiclesList.
+                vehiclesList.Remove(vehicleToDelete);
+                Console.WriteLine("Vehicle deleted successfully");
+            }else{
+                Console.WriteLine("Vehicle not found");
             }
         }
 
